@@ -1,0 +1,6 @@
+= form_tag [:user, :links], class: 'row' do
+  .col-lg-12
+    .input-group
+      = text_field_tag :url, nil, name: 'link[url]', placeholder: 'Shorten your link', class: 'form-control', required: true
+      span.input-group-btn
+        = submit_tag 'Shorten', class: 'btn btn-primary btn-large'

@@ -1,0 +1,4 @@
+- flash.each do |key, value|
+  #error-explanation.text-center
+    .alert class="alert #{bootstrap_class_for(key)}"
+      = value unless value.blank?

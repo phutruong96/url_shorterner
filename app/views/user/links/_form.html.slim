@@ -1,0 +1,6 @@
+= form_for [:user, @link] do |f|
+  .form-group
+    = f.label :url
+    = f.text_field :url, required: true, autofocus: true, autocomplete: "url", class: 'form-control'
+  .actions.text-right
+    = f.submit "Submit", class: 'btn btn-primary'
