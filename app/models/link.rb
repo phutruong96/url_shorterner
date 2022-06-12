@@ -12,7 +12,7 @@ class Link < ApplicationRecord
   default_scope { order(created_at: :desc) }
 
   def generate_shorter_url
-    self.shorter_url = SecureRandom.uuid[0..5]
+    self.shorter_url = SecureRandom.uuid[0..3]
   end
 
   def short

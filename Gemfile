@@ -63,6 +63,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.8', '>= 4.8.1'
-# gem 'simple_token_authentication', '~> 1.17'
 gem 'jquery-rails', '~> 4.5'
 gem 'slim', '~> 4.1'
+
+# API
+gem 'simple_token_authentication', '~> 1.17'
+gem 'active_model_serializers', '~> 0.10.13'
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'

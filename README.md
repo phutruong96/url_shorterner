@@ -1,24 +1,47 @@
-# README
+# URL Shorterner
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup project
 
-Things you may want to cover:
+The setups steps expect following tools installed on the system.
 
-* Ruby version
+- Github
+- Ruby [2.5.3]
+- Rails [5.2.4]
 
-* System dependencies
+##### 1. Check out the repository
 
-* Configuration
+```bash
+git clone git@github.com:organization/project-name.git
+```
 
-* Database creation
+##### 2. Config database.yml file
 
-* Database initialization
+Config database.yml file by your setting.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+##### 3. Create and setup the database
 
-* Deployment instructions
+Run the following commands to create and migrate the database.
 
-* ...
+```ruby
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
+
+##### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+bundle exec rails s
+```
+
+
+## URL shortener algorithm
+The main model in my app is a Link. These are structure of link
+
+  - URL: The url someone entered
+  - Shorter URL: new url after shorten
+  - Clicked: A counter for tracking clicks on the link
+
+Basically, each URL will be represented by a random unique 4-characters string. Whenever users click on the shorter URL, the app will find the original URL from the slug and then redirect users to this link.

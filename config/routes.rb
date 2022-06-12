@@ -3,9 +3,16 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
   root to: 'statics#home'
+  get '/:shorter_url', to: 'links#show', as: :short
+
   namespace :user do
     resources :links
   end
-  get '/:shorter_url', to: 'links#show', as: :short
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # API
+  scope module: 'api' do
+    namespace :v1 do
+      resources :links, only: %i[create index]
+    end
+  end
 end
