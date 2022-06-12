@@ -11,7 +11,7 @@ The setups steps expect following tools installed on the system.
 ##### 1. Check out the repository
 
 ```bash
-git clone git@github.com:organization/project-name.git
+git clone git@github.com:phutruong96/url_shorterner.git
 ```
 
 ##### 2. Config database.yml file
